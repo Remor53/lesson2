@@ -9,8 +9,9 @@ if __name__ == '__main__':
     else:
         print("Валера нашёлся")
 
-def find_person(name, flist):
-    '''Ищет определённый объект в списке
+
+def find_person(name, f_list):
+    """Ищет определённый объект в списке
 
     Ключевые аргументы:
     name -- объект, который необходимо найти в списке
@@ -18,11 +19,11 @@ def find_person(name, flist):
 
     Возвращает: текстовую строку (string)
 
-    '''
-    friend_name = flist[-1]
-    while friend_name != name and len(flist) > 1:
-        flist.pop()
-        friend_name = flist[-1]
-    if len(flist) > 1 or flist == [name]:
+    """
+    f_name = flist[-1]
+    while f_name != name and len(f_list) > 1:
+        f_list.pop()
+        f_name = f_list[-1]
+    if len(f_list) > 1 or f_list == [name]:
         return "Объект " + str(name) + " есть в списке"
     return "Объекта " + str(name) + " нет в списке"
